@@ -10,6 +10,7 @@ import { FooterGenericComponent } from './poi/footer-generic/footer-generic.comp
 import { NavigationHeaderComponent } from './poi/navigation-header/navigation-header.component';
 import { LocationsComponent } from './poi/locations/locations.component';
 import {LocationService} from "./poi/services/LocationService";
+import { AboutComponent } from './poi/about/about.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {LocationService} from "./poi/services/LocationService";
     PoiComponent,
     FooterGenericComponent,
     NavigationHeaderComponent,
-    LocationsComponent
+    LocationsComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

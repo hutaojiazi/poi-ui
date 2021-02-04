@@ -1,10 +1,26 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import { AboutComponent } from './poi/about/about.component';
+import { LocationsComponent } from './poi/locations/locations.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: LocationsComponent
+  },
+  {
+    path: 'about',
+    component: AboutComponent
+  }
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    CommonModule,
+    RouterModule.forRoot(routes)
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
