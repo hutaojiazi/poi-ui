@@ -11,6 +11,8 @@ import { NavigationHeaderComponent } from './poi/navigation-header/navigation-he
 import { LocationsComponent } from './poi/locations/locations.component';
 import {LocationService} from "./poi/services/LocationService";
 import { AboutComponent } from './poi/about/about.component';
+import { PageHeaderComponent } from './poi/page-header/page-header.component';
+import { HtmlLineBreaksPipe } from './poi/pipes/html-line-breaks.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { AboutComponent } from './poi/about/about.component';
     FooterGenericComponent,
     NavigationHeaderComponent,
     LocationsComponent,
-    AboutComponent
+    AboutComponent,
+    PageHeaderComponent,
+    HtmlLineBreaksPipe
   ],
   imports: [
     BrowserModule,

@@ -15,7 +15,7 @@ export class LocationsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    //this.loadLocations();
+    this.loadLocations();
   }
 
   loadLocations() {
