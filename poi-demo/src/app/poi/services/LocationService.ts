@@ -5,4 +5,11 @@ import {Injectable} from "@angular/core";
 @Injectable()
 export class LocationService {
     private locationsUrl = "/api/locations";
+
+    constructor(private http: HttpClient) {
+    }
+
+    getAllLocations() {
+        return this.http.get(this.locationsUrl);
+    }
 }
