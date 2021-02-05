@@ -2,6 +2,7 @@ import { Inject, Injectable } from '@angular/core';
 import { User } from '../models/user.model';
 import { AuthResponse } from '../models/authresponse.model';
 import { UserService } from './UserService';
+import * as jwt from 'jsonwebtoken'
 
 @Injectable({
     providedIn: 'root'
@@ -52,5 +53,15 @@ export class AuthenticationService {
             //return { email, name } as User;
             return null;
         }
+    }
+
+    public generateJwt(user: User): any {
+        const expiry = new Date();
+        expiry.setDate(expiry.getDate() + 7);
+        return jwt.sign({
+            email: user.email,
+            name: user.name,
+            exp: parseInt((expiry.getTime() / 1000).toString(), 10),
+        }, "process.env.JWT_SECRET");
     }
 }

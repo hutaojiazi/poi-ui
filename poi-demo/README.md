@@ -29,3 +29,15 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Reference
 
 https://github.com/cliveharber/gettingMean-2/tree/chapter-12
+
+
+## Note
+
+To use jsonwebtoken:
+
+in ./node_modules/@angular-devkit/build-angular/src/webpack/configs/browser.js
+
+change 
+node: false
+to
+node: { crypto: true, stream: true, buffer: true }
