@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from './services/AuthenticationService';
+import { User } from './models/user.model';
 
 @Component({
   selector: 'app-poi',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PoiComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authenticationService: AuthenticationService) { }
 
   ngOnInit(): void {
+  }
+
+  public doLogout(): void {
+    this.authenticationService.logout();
+  }
+
+  public isLoggedIn(): boolean {
+    return this.authenticationService.isLoggedIn();
+  }
+
+  public getUsername(): string {
+    //const user: User = this.authenticationService.getCurrentUser();
+    //return user ? user.name : 'Guest';
+    return 'Guest';
   }
 
 }

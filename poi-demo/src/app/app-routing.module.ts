@@ -4,6 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AboutComponent } from './poi/about/about.component';
 import { LocationsComponent } from './poi/locations/locations.component';
+import { RegisterComponent } from './poi/register/register.component';
+import { LoginComponent } from './poi/login/login.component';
 
 const routes: Routes = [
   {
@@ -13,6 +15,14 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   }
 ];
 
