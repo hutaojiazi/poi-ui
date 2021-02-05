@@ -23,9 +23,8 @@ export class PoiComponent implements OnInit {
   }
 
   public getUsername(): string {
-    //const user: User = this.authenticationService.getCurrentUser();
-    //return user ? user.name : 'Guest';
-    return 'Guest';
+    const user: User = this.authenticationService.getCurrentUser();
+    return user ? user.name : 'Guest';
   }
 
 }
