@@ -11,6 +11,7 @@ import {LocationService} from "./poi/services/LocationService";
 import {UserService} from "./poi/services/UserService";
 import {AuthenticationService} from "./poi/services/AuthenticationService";
 import {HistoryService} from "./poi/services/HistoryService";
+import {GeolocationService} from "./poi/services/GeolocationService";
 import { AboutComponent } from './poi/about/about.component';
 import { PageHeaderComponent } from './poi/page-header/page-header.component';
 import { HtmlLineBreaksPipe } from './poi/pipes/html-line-breaks.pipe';
@@ -41,7 +42,7 @@ import { SidebarComponent } from './poi/sidebar/sidebar.component';
     ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [LocationService, UserService, AuthenticationService, HistoryService],
+  providers: [LocationService, UserService, AuthenticationService, HistoryService, GeolocationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
