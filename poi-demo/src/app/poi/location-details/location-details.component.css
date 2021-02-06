@@ -1,0 +1,22 @@
+.card {
+  background-color: #eceeef;
+  padding: 1rem;
+}
+
+.card-primary {
+  border-color: #55595c;
+  margin-bottom: 0.5rem;
+}
+
+.review-header {
+  background-color: #55595c;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.review {
+    margin-right: -16px;
+    margin-left: -16px;
+    margin-bottom: 0.5em;
+}

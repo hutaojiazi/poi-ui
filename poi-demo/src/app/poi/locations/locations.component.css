@@ -1,0 +1,17 @@
+.address {
+  margin-bottom: 0.5rem;
+}
+
+.facilities span.badge {
+  margin-right: 2px;
+}
+
+.card {
+  background-color: #eceeef;
+  padding: 1rem;
+}
+
+.card-primary {
+  border-color: #55595c;
+  margin-bottom: 0.5rem;
+}

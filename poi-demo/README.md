@@ -34,11 +34,13 @@ https://github.com/cliveharber/gettingMean-2/tree/chapter-12
 ## Note
 
 ```
-npm install jquery --save
+npm install --save jquery
 
-npm install popper.js --save
+npm install --save popper.js
 
-npm install bootstrap --save
+npm install --save bootstrap
+
+npm install --save @fortawesome/fontawesome-free
 ```
 
 Make Angular use bootstrap:
@@ -48,6 +50,7 @@ To use jsonwebtoken:
 ```
 "styles": [
     "node_modules/bootstrap/dist/css/bootstrap.min.css",
+    "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
     "src/styles.css"
 ],
 "scripts": [
