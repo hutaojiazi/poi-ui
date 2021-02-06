@@ -13,16 +13,14 @@ export class LocationOpeningTime {
 }
 
 export class LocationReview {
-    id: string;
     author: string;
     rating: number;
-    createdOn: Date;
+    reviewText: string;
 
-    constructor(id: string, author: string, rating: number, createdOn: Date) {
-        this.id = id;
+    constructor(author: string, rating: number, reviewText: string) {
         this.author = author;
         this.rating = rating;
-        this.createdOn = createdOn;
+        this.reviewText = reviewText;
     }
 }
 

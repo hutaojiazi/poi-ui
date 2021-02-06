@@ -20,6 +20,8 @@ import { MostRecentFirstPipe } from './poi/pipes/most-recent-first.pipe';
 import { RegisterComponent } from './poi/register/register.component';
 import { LoginComponent } from './poi/login/login.component';
 import { SidebarComponent } from './poi/sidebar/sidebar.component';
+import { LocationDetailsComponent } from './poi/location-details/location-details.component';
+import { RatingStarsComponent } from './poi/rating-stars/rating-stars.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { SidebarComponent } from './poi/sidebar/sidebar.component';
     MostRecentFirstPipe,
     RegisterComponent,
     LoginComponent,
-    SidebarComponent
+    SidebarComponent,
+    LocationDetailsComponent,
+    RatingStarsComponent
   ],
   imports: [
     BrowserModule,

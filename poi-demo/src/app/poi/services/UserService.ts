@@ -8,7 +8,8 @@ import { AuthResponse } from '../models/authresponse.model';
     providedIn: 'root'
 })
 export class UserService {
-    private usersUrl = "/api/users";
+    private registerUrl = "/api/users";
+    private loginUrl = "/api/users/validate";
 
     constructor(private http: HttpClient) {
     }
@@ -20,7 +21,7 @@ export class UserService {
 
     public login(user: User): Promise<AuthResponse> {
         return this.http
-            .post(this.usersUrl, user)
+            .post(this.loginUrl, user)
             .toPromise()
             .then(response => response as AuthResponse)
             .catch(this.handleError);
@@ -28,7 +29,7 @@ export class UserService {
     
     public register(user: User): Promise<AuthResponse> {
         return this.http
-            .post(this.usersUrl, user)
+            .post(this.registerUrl, user)
             .toPromise()
             .then(response => response as AuthResponse)
             .catch(this.handleError);

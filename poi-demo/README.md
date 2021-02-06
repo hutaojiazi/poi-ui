@@ -33,7 +33,24 @@ https://github.com/cliveharber/gettingMean-2/tree/chapter-12
 
 ## Note
 
+npm install jquery --save
+npm install popper.js --save
+npm install bootstrap --save
+
+Make Angular use bootstrap:
+angular.json
+
 To use jsonwebtoken:
+```
+"styles": [
+    "node_modules/bootstrap/dist/css/bootstrap.min.css",
+    "src/styles.css"
+],
+"scripts": [
+    "node_modules/jquery/dist/jquery.min.js",
+    "node_modules/bootstrap/dist/js/bootstrap.min.js" 
+]
+```
 
 in ./node_modules/@angular-devkit/build-angular/src/webpack/configs/browser.js
 

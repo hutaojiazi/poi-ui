@@ -20,7 +20,21 @@ export class LocationsComponent implements OnInit {
   public message: string;
 
   ngOnInit(): void {
-    this.getPosition();
+    //this.getPosition();
+    this.getLocations({
+      "coords": {
+        "latitude": 73.56735,
+        "longitude": 45.52155
+      }
+    });
+  }
+
+  public pageContent = {
+    header: {
+      title: 'Wonder Lands',
+      strapline: 'Find places to work with wifi near you!'
+    },
+    sidebar: 'Looking for wifi and a seat? Wonder Lands helps you find places to work when out and about. Perhaps with coffee, cake or a pint? Let Loc8r help you find the place you\'re looking for.'
   }
 
   private getPosition(): void {
@@ -37,7 +51,7 @@ export class LocationsComponent implements OnInit {
     const lng: number = position.coords.longitude;
     console.log("lat->" + lat + ', lng->' + lng);
     this.locationService.getAllLocations()
-        .subscribe(
+        .then(
             (data: Locations) => {
               this.message = data.value.length > 0 ? '' : 'No locations found';
               this.locations = data.value;
