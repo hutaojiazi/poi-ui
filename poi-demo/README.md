@@ -33,9 +33,13 @@ https://github.com/cliveharber/gettingMean-2/tree/chapter-12
 
 ## Note
 
+```
 npm install jquery --save
+
 npm install popper.js --save
+
 npm install bootstrap --save
+```
 
 Make Angular use bootstrap:
 angular.json
