@@ -26,12 +26,12 @@ export class AuthenticationService {
 
     public login(user: User): Promise<any> {
         return this.userService.login(user)
-          .then((authResp: AuthResponse) => this.saveToken(this.generateJwt(user, authResp.id)));
+          .then((authResp: AuthResponse) => this.saveToken(this.generateJwt(authResp)));
     }
 
     public register(user: User): Promise<any> {
         return this.userService.register(user)
-          .then((authResp: AuthResponse) => this.saveToken(this.generateJwt(user, authResp.id)));
+          .then((authResp: AuthResponse) => this.saveToken(this.generateJwt(authResp)));
     }
 
     public logout(): void {
@@ -56,13 +56,13 @@ export class AuthenticationService {
         }
     }
 
-    public generateJwt(user: User, id: String): any {
+    public generateJwt(authResp: AuthResponse): any {
         const expiry = new Date();
         expiry.setDate(expiry.getDate() + 7);
         return jwt.sign({
-            id: id,
-            email: user.email,
-            name: user.name,
+            id: authResp.id,
+            email: authResp.email,
+            name: authResp.name,
             exp: parseInt((expiry.getTime() / 1000).toString(), 10),
         }, "process.env.JWT_SECRET");
     }
