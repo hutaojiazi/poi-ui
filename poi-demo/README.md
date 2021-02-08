@@ -29,6 +29,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Reference
 
 https://github.com/cliveharber/gettingMean-2/tree/chapter-12
+https://www.baeldung.com/spring-websockets-send-message-to-user
 
 
 ## Note
