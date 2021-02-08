@@ -12,6 +12,7 @@ import {UserService} from "./poi/services/UserService";
 import {AuthenticationService} from "./poi/services/AuthenticationService";
 import {HistoryService} from "./poi/services/HistoryService";
 import {GeolocationService} from "./poi/services/GeolocationService";
+import {ChatService} from "./poi/services/ChatService";
 import { AboutComponent } from './poi/about/about.component';
 import { PageHeaderComponent } from './poi/page-header/page-header.component';
 import { HtmlLineBreaksPipe } from './poi/pipes/html-line-breaks.pipe';
@@ -22,6 +23,7 @@ import { LoginComponent } from './poi/login/login.component';
 import { SidebarComponent } from './poi/sidebar/sidebar.component';
 import { LocationDetailsComponent } from './poi/location-details/location-details.component';
 import { RatingStarsComponent } from './poi/rating-stars/rating-stars.component';
+import { ChatComponent } from './poi/chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import { RatingStarsComponent } from './poi/rating-stars/rating-stars.component'
     LoginComponent,
     SidebarComponent,
     LocationDetailsComponent,
-    RatingStarsComponent
+    RatingStarsComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,7 @@ import { RatingStarsComponent } from './poi/rating-stars/rating-stars.component'
     ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [LocationService, UserService, AuthenticationService, HistoryService, GeolocationService],
+  providers: [LocationService, UserService, AuthenticationService, HistoryService, GeolocationService, ChatService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

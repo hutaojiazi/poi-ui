@@ -7,6 +7,7 @@ import { LocationsComponent } from './poi/locations/locations.component';
 import { LocationDetailsComponent } from './poi/location-details/location-details.component';
 import { RegisterComponent } from './poi/register/register.component';
 import { LoginComponent } from './poi/login/login.component';
+import { ChatComponent } from './poi/chat/chat.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent
+  },
+  {
+    path: 'chat',
+    component: ChatComponent
   },
   {
     path: 'register',
