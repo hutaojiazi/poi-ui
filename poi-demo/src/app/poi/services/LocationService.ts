@@ -18,7 +18,7 @@ export class LocationService {
         return this.http
             .get(this.locationsUrl)
             .toPromise()
-            .then(response => response as Location)
+            .then(response => response as Locations)
             .catch(this.handleError);
     }
 
@@ -35,7 +35,7 @@ export class LocationService {
         const url: string = `${this.locationsUrl}/${locationId}/reviews`;
         const httpOptions = {
           headers: new HttpHeaders({
-            'Authorization': `Bearer ${this.storage.getItem('loc8r-token')}`
+            'Authorization': `Bearer ${this.storage.getItem('heureux666-token')}`
           })
         };
         return this.http

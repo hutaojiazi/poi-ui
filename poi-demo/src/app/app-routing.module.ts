@@ -8,6 +8,8 @@ import { LocationDetailsComponent } from './poi/location-details/location-detail
 import { RegisterComponent } from './poi/register/register.component';
 import { LoginComponent } from './poi/login/login.component';
 import { ChatComponent } from './poi/chat/chat.component';
+import { ProductListComponent } from './poi/product-list/product-list.component';
+import { ProductDetailsComponent } from './poi/product-details/product-details.component';
 
 const routes: Routes = [
   {
@@ -17,6 +19,14 @@ const routes: Routes = [
   {
     path: 'location/:locationId',
     component: LocationDetailsComponent
+  },
+  {
+    path: 'products',
+    component: ProductListComponent
+  },
+  {
+    path: 'products/:id',
+    component: ProductDetailsComponent
   },
   {
     path: 'about',
