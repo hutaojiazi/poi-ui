@@ -29,7 +29,7 @@ export class LocationDetailsComponent implements OnInit {
   public formVisible: boolean = false;
   public formError: string;
 
-  public googleAPIKey: string = '<Put your Google Maps API Key here>';
+  public googleAPIKey: string = 'google_map_api_key';
 
   ngOnInit(): void {
     this.route.paramMap

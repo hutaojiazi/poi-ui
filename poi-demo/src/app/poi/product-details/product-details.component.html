@@ -1,1 +1,19 @@
-<p>product-details works!</p>
+<app-page-header [content]="pageContent.header"></app-page-header>
+<div class="row">
+    <div class="col-md-8">
+        <img src="{{ product.pictureUrl }}" alt="" width="100%">
+    </div>
+    <div class="col-md-4">
+        <h5>About the product:</h5>
+        <p>{{ product.name }}</p>
+        <br>
+        <h5>Price:</h5>
+        <p>{{ product.price }}</p>
+        <br>
+        <h5>Quantity:</h5>
+        <p><input type="number" min="1" value="1" class="number"></p>
+        <br>
+        <p><button class="btn btn-primary">Add To Cart</button></p>
+    </div>
+    <app-sidebar [content]="pageContent.sidebar" class="col-12 col-md-4"></app-sidebar>
+</div>
