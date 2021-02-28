@@ -1,0 +1,14 @@
+<app-page-header [content]="pageContent.header"></app-page-header>
+<div class="row">
+    <div class="col-md-4" *ngFor="let product of products">
+        <div class="card mb-2">
+            <img class="card-img-top" src="{{ product.pictureUrl }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ product.name }}</h5>
+                <p class="card-text">{{ product.price }}</p>
+                <a routerLink="/products/{{product.id}}" class="btn btn-primary">Details</a>
+            </div>
+        </div>
+    </div>
+    <app-sidebar [content]="pageContent.sidebar" class="col-12 col-md-4"></app-sidebar>
+</div>
