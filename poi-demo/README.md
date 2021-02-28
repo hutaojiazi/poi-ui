@@ -1,6 +1,9 @@
-# Poi
+# POI example (frontend part)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
+
+* npm install
+* npm start
 
 ## Development server
 
@@ -30,8 +33,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 https://github.com/cliveharber/gettingMean-2/tree/chapter-12
 
+## Userful commands:
 
-## Note
+https://angular.io/cli
 
 ```
 npm install --save jquery
@@ -41,7 +45,13 @@ npm install --save popper.js
 npm install --save bootstrap
 
 npm install --save @fortawesome/fontawesome-free
+
+ng n <project_name>
+
+ng g c <component_name>
 ```
+
+## Note
 
 Make Angular use bootstrap:
 angular.json
